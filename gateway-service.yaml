@@ -18,3 +18,11 @@ spring:
           uri: lb://account-service
           predicates:
             - Path=/api/accounts/**
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowed-origins: "http://localhost:3000"
+            allowed-methods: "*"
+            allowed-headers: "*"
+            allow-credentials: true
+            max-age: 3600
